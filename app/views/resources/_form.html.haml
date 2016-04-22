@@ -1,0 +1,11 @@
+/ creating a new resource
+
+= simple_form_for(@resource, html: { class: 'form-horizontal '}) do |f|
+  = f.input :company, label: "Company Title"
+  = f.input :description, label: "Resouce Description"
+  = f.input :url, label: "Link to Resource"
+  %br/
+  = f.button :submit
+
+
+
