@@ -1,0 +1,10 @@
+<!-- creating a new resource -->
+  
+<%= simple_form_for(@resource, html: { class: 'form-horizontal '}) do |f| %>
+  <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category" } %> <!-- select and loop through different categories -->
+  <%= f.input :company, label: "Company Title" %>
+  <%= f.input :description, label: "Resource Description" %>
+  <%= f.input :url, label: "Link to Resource" %>
+  <br/>
+  <%= f.button :submit %>
+<% end %>

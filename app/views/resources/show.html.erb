@@ -1,0 +1,14 @@
+<!-- once a resource is created this comes up -->
+
+<h1>
+  <%= @resource.company    %>
+</h1>
+<p>
+  <%= @resource.description %>
+</p>
+<p>
+  <%= @resource.url %>
+</p>
+<%= link_to "Home", resources_path %>
+<%= link_to "Edit", edit_resource_path(@resource)  %>
+<%= link_to "Delete", resource_path, method: :delete, data: { confirm: "Are you sure?" } %>

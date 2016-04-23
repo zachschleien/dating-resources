@@ -4,7 +4,14 @@ class ResourcesController < ApplicationController
   # GET /resources
   # GET /resources.json
   def index
-    @resources = Resource.all.order("created_at DESC")
+    # if category params is blank, list all of the resources
+    if params[:category].blank?
+      @resources = Resource.all.order("created_at DESC")
+    else
+    # otherwise find category id and loop through only resources that have the category id
+      @category_id = Category.find_by(name: params[:category]).id
+      @resources = Resource.where(category_id: @category_id).order("created_at DESC")
+    end 
   end
 
   # GET /resources/1
@@ -67,8 +74,8 @@ class ResourcesController < ApplicationController
       @resource = Resource.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Require is what is required and permit saves to the database
     def resource_params
-      params.require(:resource).permit(:company, :description, :url)
+      params.require(:resource).permit(:company, :description, :url, :category_id)
     end
 end

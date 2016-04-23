@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DatingGuide</title>
+  <title>Ruby on Rails Jobs</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!-- lists and links all categories on the top of home page -->
+  <% Category.all.each do |category| %>
+  <%= link_to category.name, resources_path(category: category.name) %>
+  <% end %>
 
 <%= yield %>
 
