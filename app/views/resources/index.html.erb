@@ -1,14 +1,16 @@
 <!-- lists all resources -->
-
-<% @resources.each do |resource|  %>
-  <h2>
-    <%= link_to resource.company, resource %>  <!-- can edit title -->
-  </h2>
-  <p>
-    <%= resource.description  %>
-  </p>
-  <p>
-    <%= resource.url  %>
-  </p>
-<% end %>
-<%= link_to 'New Resource', new_resource_path  %>
+<div id="resources">
+  <% @resources.each do |resource|  %>
+    <div class="resource">
+      <h2>
+        <%= link_to resource.company, resource %>  <!-- can edit title -->
+      </h2>
+    </div>
+    <p>
+      <%= resource.description  %>
+    </p>
+    <p>
+      <%= resource.url  %>
+    </p>
+  <% end %>
+</div>

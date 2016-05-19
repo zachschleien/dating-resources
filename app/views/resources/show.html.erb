@@ -1,14 +1,21 @@
 <!-- once a resource is created this comes up -->
-
-<h1>
-  <%= @resource.company    %>
-</h1>
-<p>
-  <%= @resource.description %>
-</p>
-<p>
-  <%= @resource.url %>
-</p>
-<%= link_to "Home", resources_path %>
-<%= link_to "Edit", edit_resource_path(@resource)  %>
-<%= link_to "Delete", resource_path, method: :delete, data: { confirm: "Are you sure?" } %>
+<div id="resources">
+  <div class="resource">
+    <h2>
+      <%= @resource.company %>
+    </h2>
+    <p>
+      <%= @resource.description %>
+    </p>
+    <button class="btn btn-default">
+      <!-- The button will go to the url of the page -->
+      <%= link_to "Explore", @resource.url %> 
+    </button>
+  </div>
+</div>
+<div id="links">
+<!--   # btn class styles buttons -->
+  <%= link_to "Back", resources_path, class: "btn btn-sm btn-default" %>
+  <%= link_to "Edit", edit_resource_path(@resource), class: "btn btn-sm btn-default"  %>
+  <%= link_to "Delete", resource_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-default" %>
+</div>
