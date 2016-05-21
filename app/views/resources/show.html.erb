@@ -1,16 +1,15 @@
 <!-- once a resource is created this comes up -->
 <div id="resources">
   <div class="resource">
-    <h2>
+    <h2 class="title">
       <%= @resource.company %>
     </h2>
     <p class="description">
       <%= @resource.description %>
     </p>
-    <button class="btn btn-default">
-      <!-- The button will go to the url of the page -->
-      <%= link_to "Explore", @resource.url %> 
-    </button>
+    <p class="url">
+      <%= link_to(truncate(@resource.url, :length => 140), @resource.url, target: '_blank') %>
+    </p>
   </div>
 </div>
 <div id="links">

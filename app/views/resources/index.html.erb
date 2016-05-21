@@ -9,7 +9,7 @@
     <p class="description">
       <%= resource.description  %>
     </p>
-    <p>
+    <p class="url">
       <%= link_to(truncate(resource.url, :length => 140), resource.url, target: '_blank') %>
     </p>
   <% end %>

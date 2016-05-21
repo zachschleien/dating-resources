@@ -49,6 +49,11 @@ body {
   border: none;
 }
 
+.navbar-default .navbar-link {
+    color: #777;
+    text-decoration: none;
+}
+
 .navbar-brand {
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -57,23 +62,11 @@ body {
   color: #1D976C !important;
 }
 
-#resources {
-  .resource {
-    padding: 1em 0;
-    border-bottom: 1px solid rgba(250,250,250, 0.5);
-    h2 {
-      font-size: 2.5em;
-      font-weight: 300;
-      margin-bottom: 0;
-      color: white;
-    }
-    p {
-      // color: rgba(250,250,250, 0.5);
-      margin: 20px 0 10px;
-    }
-  }
+h2.title {
+  color: #1D976C;
+  text-decoration: none;
+  margin-top: 45px;
 }
-
 h2.title {
    a {
       color: #1D976C;
