@@ -3,9 +3,10 @@ ActiveAdmin.register Resource do
   
   index do
     column "Name", :company
-    column :category_id
+    column :category_id 
     column :description
     column :url
     actions
   end
 end
+
