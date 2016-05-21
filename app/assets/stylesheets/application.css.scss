@@ -27,11 +27,7 @@ html {
 
 body {
   height: 100%;
-  background: -webkit-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%);
-  background:    -moz-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%);
-  background:     -ms-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%);
-  background:      -o-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%);
-  background:         linear-gradient(90deg, #1D976C 10%, #93F9B9 90%);
+  background-color: #89bdd3;
   font-family: 'Lato', sans-serif;
 }
 
@@ -70,6 +66,7 @@ body {
       font-weight: 300;
       margin-bottom: 0;
       color: white;
+      text-decoration: none;
       a {
         color: white;
       }
@@ -81,14 +78,10 @@ body {
   }
 }
 
-/*#resources-text {
-  .resource-text {
-    p {
-          color: rgba(250,250,250, 0.5);
-          
-        } 
-  }
-} */
+p.description {
+  margin: 20px 0 10px;
+  font: 15px/24px Georgia,'Droid Serif',serif;
+}
 
 #links {
   margin-top: 2em;

@@ -6,11 +6,13 @@
         <%= link_to resource.company, resource %>  <!-- can edit title -->
       </h2>
     </div>
-    <p>
+    <p class="description">
       <%= resource.description  %>
     </p>
     <p>
-      <%= resource.url  %>
+      <%= link_to(truncate(resource.url, :length => 140), resource.url, target: '_blank') %>
     </p>
   <% end %>
 </div>
+
+
