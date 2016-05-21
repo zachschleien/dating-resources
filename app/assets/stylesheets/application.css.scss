@@ -85,3 +85,7 @@ p.description {
   margin-top: 2em;
 }
 
+li.category-link {
+   transition: height 5s !important;
+-webkit-transition: height 5s !important;
+}
