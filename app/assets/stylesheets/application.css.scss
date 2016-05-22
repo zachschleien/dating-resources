@@ -49,17 +49,18 @@ body {
   border: none;
 }
 
-.navbar-default .navbar-link {
-    color: #777;
-    text-decoration: none;
-}
-
-.navbar-brand {
+a.navbar-brand {
   text-transform: uppercase;
   letter-spacing: -1px;
   font-size: 2em;
   font-weight: 300;
   color: #1D976C !important;
+  text-decoration: none;
+}
+
+ul.navbar-nav {
+  padding: 4px 0 0px 200px;
+  font-size: 15px;
 }
 
 h2.title {
@@ -81,11 +82,25 @@ p.description {
   line-height: 1.7em;
 }
 
-#links {
+p.url {
+  a {
+    text-decoration: none;
+  }
+}
+
+#link {
   margin-top: 2em;
 }
 
-li.category-link {
-   transition: height 5s !important;
--webkit-transition: height 5s !important;
+#links {
+  a {
+  text-decoration: none;
+  }
 }
+
+li.category-link {
+   a {
+    text-decoration: none;
+   }
+}
+
