@@ -76,6 +76,6 @@ class ResourcesController < ApplicationController
 
     # Require is what is required and permit saves to the database
     def resource_params
-      params.require(:resource).permit(:company, :description, :url, :category_id)
+      params.require(:resource).permit(:company, :description, :url, :category_id, :tagline)
     end
 end

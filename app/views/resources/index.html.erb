@@ -1,13 +1,13 @@
 <!-- lists all resources -->
 <div id="resources">
-  <% @resources.each do |resource|  %>
+  <% @resources.each do |resource| %>
     <div class="resource">
       <h2 class="title">
         <%= link_to resource.company, resource %>  <!-- can edit title -->
       </h2>
     </div>
     <p class="tagline">
-      <%= resource.tagline  %>
+      <%= resource.tagline %>
     </p>
     <p class="url">
       <%= link_to(truncate(resource.url, :length => 140), resource.url, target: '_blank') %>
