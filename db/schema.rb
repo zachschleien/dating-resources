@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160521030115) do
+ActiveRecord::Schema.define(version: 20160528214306) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -59,7 +59,10 @@ ActiveRecord::Schema.define(version: 20160521030115) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
+    t.string   "tagline"
   end
+
+  add_index "resources", ["tagline"], name: "index_resources_on_tagline"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
